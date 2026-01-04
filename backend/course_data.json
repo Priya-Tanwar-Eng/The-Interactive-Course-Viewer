@@ -1,0 +1,20 @@
+{
+  "courseTitle": "Full Stack Mastery",
+  "description": "From zero to hero in MERN stack.",
+  "modules": [
+    {
+      "title": "Module 1: Introduction",
+      "lessons": [
+        { "lessonKey": "l1", "title": "Welcome to the Course", "duration": "5:00" },
+        { "lessonKey": "l2", "title": "Setting up the Environment", "duration": "10:00" }
+      ]
+    },
+    {
+      "title": "Module 2: Backend Logic",
+      "lessons": [
+        { "lessonKey": "l3", "title": "Express Routing", "duration": "15:00" },
+        { "lessonKey": "l4", "title": "Connecting MongoDB", "duration": "20:00" }
+      ]
+    }
+  ]
+}
