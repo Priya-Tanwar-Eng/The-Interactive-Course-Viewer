@@ -10,7 +10,6 @@ export default function LessonItem({ lesson, isLocked, onComplete }) {
         disabled={isLocked || lesson.completed}
         onChange={() => onComplete(lesson._id)}
       />
-
       <span>
         {lesson.title} ({lesson.duration})
       </span>

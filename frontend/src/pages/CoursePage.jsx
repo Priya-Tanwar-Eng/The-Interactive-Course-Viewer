@@ -4,22 +4,21 @@ import ProgressBar from "../components/ProgressBar";
 import ModuleAccordion from "../components/ModuleAccordion";
 import "../styles/course.css";
 
-// const COURSE_ID = "6958c0d2f58e741ff374193a";
-
 export default function CoursePage() {
   const [course, setCourse] = useState(null);
 
   useEffect(() => {
+    // eslint-disable-next-line react-hooks/immutability
     fetchCourse();
   }, []);
 
  const fetchCourse = async () => {
   const res = await getCourse();
+  console.log(res.data);
   setCourse(res.data);
 };
 
-
-  const handleComplete = async (lessonId) => {
+ const handleComplete = async (lessonId) => {
     setCourse((prev) => ({
       ...prev,
       modules: prev.modules.map((m) => ({
@@ -33,7 +32,7 @@ export default function CoursePage() {
     try {
       await completeLesson(lessonId);
     } catch {
-      fetchCourse(); // rollback if error
+      fetchCourse();
     }
   };
 

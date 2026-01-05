@@ -30,7 +30,7 @@ export const getAllCourse = async (req, res) => {
       (p) => p.lessonId.toString()
     );
 
-    // 3. Response structure build karo
+
     const response = {
       _id: course._id,
       courseTitle: course.courseTitle,
